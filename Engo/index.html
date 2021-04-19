@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Đề thi Engo</title>
+        <meta charset="UTF-8">
+        <link rel = "stylesheet" href = "css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class= "header">
+            <div class = "header-top">
+                <div class = "container-fluid">
+                    <div class = "row">
+                        <div class = "col-12">
+                            <div class="alert alert-dismissible alert-box fade show">
+                                <button type="button" class="close close-button" data-dismiss="alert">&times;</button>
+                                <p class = "text">join our showroom and get 20% of ! Coupon code:Hebe20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class ="header-bottom">
+                <div class = "container-fluid">
+                    <div class = "row">
+                        <div class = "col-3">
+                            <div class = "navigation">
+                                <div class = "overlay" id = "overlay"></div>
+                                    <div class = "sidebar" id= "bar">
+                                        <ul class = "menu-toogle">
+                                            <li class = "menu-item"><a class = " menu-title" href = "#">menu</a></li>
+                                            <li class = "menu-item"><a href="#">home<i class="fa fa-angle-right icon" aria-hidden="true"></i></a></li>
+                                            <li class = "menu-item"><a href="#">shop<i class="fa fa-angle-right icon" aria-hidden="true"></i></a></li>
+                                            <li class = "menu-item"><a href="#">element<i class="fa fa-angle-right icon" aria-hidden="true"></i></a></li>
+                                            <li class = "menu-item"><a href="#">page<i class="fa fa-angle-right icon" aria-hidden="true"></i></a></li>
+                                            <li class = "menu-item"><a href="#">blog<i class="fa fa-angle-right icon" aria-hidden="true"></i></a></li>
+                                            <li class = "menu-item"><a href="#">mega menu<i class="fa fa-angle-right icon" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                        <div class = "closeBtn">
+                                            <button class = "close" id = "close" type="button">
+                                                <img src = "img/cancel.png" alt= "close" style="width:20px">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button type = "button" class="sidebarBtn">
+                                    <span><i class="fa fa-list" aria-hidden="true"></i></span>
+                                    </button>
+                                <form method="GET" action="" class="form">
+                                    <div class="search-box">
+                                        <input type ="search" class = "search" placeholder="Search...">
+                                        <button class = "search-submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                        <i class="fa fa-search search-bar" aria-hidden="true"></i>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class = "col-6">
+                            <ul class="nav  menu justify-content-center">
+                                <li class="nav-item">
+                                  <a class="nav-link home" href="#">home</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text" href="#">shop</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text" href="#">element</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link image" href="#"><img src ="img/logoa.jpg" alt="logo"></a>
+                                  </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text" href="#">page</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text" href="#">blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link megamenu" href="#">megamenu</a>
+                                </li>
+                            </ul>
+                        </div>  
+                        <div class = "col-3">
+                            <div class = "header-menu">
+                                <div class="dropdown select"> 
+                                    <button type="button" class="btn button dropdown" data-toggle="dropdown">
+                                     <img src = "https://lebe.famithemes.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt = "language">
+                                     <i class="fa fa-angle-down icon" aria-hidden="true"></i>
+                                   </button>
+                                   <div class="dropdown-menu">
+                                     <a class="dropdown-item" href="#">Englisht</a>
+                                   </div>
+                               </div>
+                               <div class="dropdown select"> 
+                                   <button type="button" class="btn button dropdown" data-toggle="dropdown">
+                                    USD
+                                    <i class="fa fa-angle-down icon" aria-hidden="true"></i>
+                                  </button>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">EUR</a>
+                                  </div>
+                               </div>  
+                               <div class  = "account">
+                                    <i class="fa fa-user-o icon" id = "account" aria-hidden="true"></i>
+                               </div>
+                               <div class = "bag">
+                                <i class="fa fa-shopping-bag icon" id = "list-product" aria-hidden="true"></i>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-12">
+                            <form method="GET" action="" class = "find" id = 'find'>
+                                <input type = "search" id="search" placeholder="Searching for...">
+                            </form>
+                            <div class = "overlay"></div>
+                        </div>
+                        <div class = "row">
+                            <div class = "screen" id = "screen"></div>
+                            <div class = "menu-product" id="menu-product">
+                                <div class = "content">
+                                    <p class = "title">your cart</p>
+                                    <button class = "close-menu" id = "close-menu"><img src="img/cancel.png" alt="close"></button>
+                                    <span class = "product-item">0</span>
+                                </div>
+                                <p class = "text">No product in the cart</p>
+                                <button type="button" class="shopping-button">start shopping</button>
+                                <a href="#">our shipping & return policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- slide -->
+        <section class = "slide">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/slide3.jpg" alt="banner" class="img-fluid">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slide2.jpg" alt="banner" class="img-fluid">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slide1.jpg" alt="banner" class="img-fluid">
+                </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            <div class = "content-slide">
+                <p class = "text">Our starting lineup</p>
+                <h3 class = "title">new arrivals</h3>
+                <button type = "button" class = "button" style="margin-right: 7px;">for men's</button>
+                <button type = "button" class = "button" style="margin-left: 7px;">for women's</button>
+            </div>
+        </section>
+       <section class = "banner">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-lg-6 col-12">
+                        <div class = "row">
+                            <div class = "col-6">
+                                <div class = "product-banner">
+                                    <img src = "img/boy.jpg" class = "img-fluid" alt = "boy" style="width: 100%;">
+                                    <div class = "banner-bg"></div>
+                                    <div class = "banner-info">
+                                        <p class = "text">new arrivals</p>
+                                        <a href = "#" class = "banner-link"><i class="fa fa-angle-left icon" aria-hidden="true"></i>shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "col-6">
+                                <div class = "product-banner">
+                                    <img src = "img/bag.jpg" class = "img-fluid image" alt = "bag" style="width: 100%;">
+                                    <div class = "banner-bg"></div>
+                                    <div class = "banner-info">
+                                        <p class = "text">bags</p>
+                                        <a href = "#" class = "banner-link"><i class="fa fa-angle-left icon" aria-hidden="true"></i>shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-12">
+                                <div class = "banner-content"  style = "margin-top: 38px;">
+                                    <div class = "product-banner">
+                                        <img src = "img/intro.jpg" class = "img-fluid" alt = "bag" style="width: 100%;">
+                                        <div class = "banner-bg-product"></div>
+                                        <div class = "banner-info">
+                                            <p class = "text">accessories</p>
+                                            <a href = "#" class = "banner-link"><i class="fa fa-angle-left icon" aria-hidden="true"></i>shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-lg-6 col-12">
+                        <div class = "content-product"></div>
+                        <div class = "product-banner">
+                            <img src = "img/girl.jpg" class = "img-fluid image" alt = "bag">
+                            <div class = "banner-bg-product"></div>
+                            <div class = "banner-info">
+                                <p class = "text">accessories</p>
+                                <a href = "#" class = "banner-link"><i class="fa fa-angle-left icon" aria-hidden="true"></i>shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+       <!-- introduce product -->
+       <section class = "introduce-product">
+           <div class = "container">
+               <div class = "row">
+                    <div class = "col-12">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                            <a class="nav-link active title" data-toggle="tab" href="#home"><h3>new arrivals</h3></a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link title-hot" data-toggle="tab" href="#menu1">best seller</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link title-hot" data-toggle="tab" href="#menu2">top rate</a>
+                            </li>
+                        </ul>
+                    </div>
+               </div>
+               <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <div class = "row">
+                        <div class ="col-lg-3 col-md-4 col-6">
+                            <div class = "product">
+                                <img src="img/ao.png" class="img-fluid change-img" alt = "product">
+                                <div class = "hover-img">
+                                    <img src="img/product-hover6.jpg" class= "img-fluid" alt = "product"/>
+                                    <div class = "menu">
+                                        <div class = "menu-icon">
+                                            <a href = "#" >
+                                               <i class="fa fa-heart icon" aria-hidden="true"></i>
+                                            </a>
+                                            <a href = "#">
+                                                <i class="fa fa-long-arrow-right icon" aria-hidden="true" style="margin:0 5px"></i>
+                                            </a>
+                                            <a href = "#">
+                                               <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                             
+                             <div class = "product-content">
+                                 <p class = "product-name">women flyde classic outer</p>
+                                 <p class = "product-sell">$320.00</p>
+                             </div>
+                        </div>
+                        <div class ="col-lg-3 col-md-4 col-6">
+                            <div class = "product">
+                                <img src="img/towel.png" class="img-fluid change-img" alt = "product">
+                                <div class = "hover-img">
+                                    <img src="img/product-hover1.jpg" class= "img-fluid" alt = "product">
+                                    <div class = "menu">
+                                        <div class = "menu-icon">
+                                            <a href = "#" >
+                                               <i class="fa fa-heart icon" aria-hidden="true"></i>
+                                            </a>
+                                            <a href = "#">
+                                                <i class="fa fa-long-arrow-right icon" aria-hidden="true" style="margin:0 5px"></i>
+                                            </a>
+                                            <a href = "#">
+                                               <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                             <div class = "product-content">
+                                 <p class = "product-name">women flyde classic outer</p>
+                                 <p class = "product-sell">$320.00</p>
+                             </div>
+                        </div>
+                        <div class ="col-lg-3 col-md-4 col-6">
+                            <div class = "product">
+                                <img src = "img/pan.png" class = "img-fluid" alt = "product">
+                                <div class = "hover-img">
+                                    <img src="img/product-hover2.jpg" class= "img-fluid" alt = "product">
+                                    <div class = "menu">
+                                        <div class = "menu-icon">
+                                            <a href = "#" >
+                                               <i class="fa fa-heart icon" aria-hidden="true"></i>
+                                            </a>
+                                            <a href = "#">
+                                                <i class="fa fa-long-arrow-right icon" aria-hidden="true" style="margin:0 5px"></i>
+                                            </a>
+                                            <a href = "#">
+                                               <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class = "product-content">
+                                 <p class = "product-name">women flyde classic outer</p>
+                                 <p class = "product-sell">$320.00</p>
+                             </div>
+                        </div>
+                        <div class ="col-lg-3 col-md-4 col-6">
+                            <div class = "product">
+                                <img src = "img/shoes1.png" class = "img-fluid" alt = "product">
+                                <div class = "hover-img">
+                                    <img src="img/product-hover3.jpg" class= "img-fluid" alt = "product">
+                                    <div class = "menu">
+                                        <div class = "menu-icon">
+                                            <a href = "#" >
+                                               <i class="fa fa-heart icon" aria-hidden="true"></i>
+                                            </a>
+                                            <a href = "#">
+                                                <i class="fa fa-long-arrow-right icon" aria-hidden="true" style="margin:0 5px"></i>
+                                            </a>
+                                            <a href = "#">
+                                               <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class = "product-content">
+                                 <p class = "product-name">women flyde classic outer</p>
+                                 <p class = "product-sell">$320.00</p>
+                             </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class ="col-lg-3 col-md-4 col-6">
+                            <div class = "product">
+                                <img src = "img/book.png" class = "img-fluid" alt = "product">
+                                <div class = "hover-img">
+                                    <img src="img/product-hover4.jpg" class= "img-fluid" alt = "product">
+                                    <div class = "menu">
+                                        <div class = "menu-icon">
+                                            <a href = "#" >
+                                               <i class="fa fa-heart icon" aria-hidden="true"></i>
+                                            </a>
+                                            <a href = "#">
+                                                <i class="fa fa-long-arrow-right icon" aria-hidden="true" style="margin:0 5px"></i>
+                                            </a>
+                                            <a href = "#">
+                                               <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class = "product-content">
+                                 <p class = "product-name">women flyde classic outer</p>
+                                 <p class = "product-sell">$320.00</p>
+                             </div>
+                        </div>
+                        <div class ="col-lg-3 col-md-4 col-6">
+                            <div class = "product">
+                                <img src = "img/whiteshirt.png" class = "img-fluid" alt = "product">
+                                <div class = "hover-img">
+                                    <img src="img/product-hover5.jpg" class= "img-fluid" alt = "product">
+                                    <div class = "menu">
+                                        <div class = "menu-icon">
+                                            <a href = "#" >
+                                               <i class="fa fa-heart icon" aria-hidden="true"></i>
+                                            </a>
+                                            <a href = "#">
+                                                <i class="fa fa-long-arrow-right icon" aria-hidden="true" style="margin:0 5px"></i>
+                                            </a>
+                                            <a href = "#">
+                                               <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class = "product-content">
+                                 <p class = "product-name">women flyde classic outer</p>
+                                 <p class = "product-sell">$320.00</p>
+                             </div>
+                        </div>
+                        <div class ="col-lg-3 col-md-4 col-6">
+                            <div class = "product">
+                                <img src = "img/vase.png" class = "img-fluid" alt = "product">
+                                <div class = "hover-img">
+                                    <img src="img/product-hover7.jpg" class= "img-fluid image" alt = "product">
+                                    <div class = "menu">
+                                        <div class = "menu-icon">
+                                            <a href = "#" >
+                                               <i class="fa fa-heart icon" aria-hidden="true"></i>
+                                            </a>
+                                            <a href = "#">
+                                                <i class="fa fa-long-arrow-right icon" aria-hidden="true" style="margin:0 5px"></i>
+                                            </a>
+                                            <a href = "#">
+                                               <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class = "product-content">
+                                 <p class = "product-name">women flyde classic outer</p>
+                                 <p class = "product-sell">$320.00</p>
+                             </div>
+                        </div>
+                        <div class ="col-lg-3 col-md-4 col-6">
+                            <div class = "product">
+                                <img src = "img/product3.png" class = "img-fluid" alt = "product">
+                                <div class = "hover-img">
+                                    <img src="img/product-hover.jpg" class= "img-fluid image" alt = "product">
+                                    <div class = "menu">
+                                        <div class = "menu-icon">
+                                            <a href = "#" >
+                                               <i class="fa fa-heart icon" aria-hidden="true"></i>
+                                            </a>
+                                            <a href = "#">
+                                                <i class="fa fa-long-arrow-right icon" aria-hidden="true" style="margin:0 5px"></i>
+                                            </a>
+                                            <a href = "#">
+                                               <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class = "product-content">
+                                 <p class = "product-name">women flyde classic outer</p>
+                                 <p class = "product-sell">$320.00</p>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="menu1">...</div>
+                <div class="tab-pane container fade" id="menu2">...</div>
+              </div>
+           </div>
+       </section>
+       <section class = "intro">
+           <div class = "container">
+               <div class = "row">
+                   <div class = "col-12">
+                       <div class = "image-intro">
+                           <img src = "img/introduce.jpg" class="img-fluid" alt = "">
+                           <div class = "intro-bg"></div>
+                           <div class = "intro-content">
+                               <h2 class = "text">Free shipping worldwide on all basket over 600</h2>
+                               <a href = "#" class = "link">shipping & return</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       <section class ="blog">
+           <div class = "container">
+            <div class = "blog-header">
+               <div class = "row">
+                   <div class = "col-12">
+                        <div class = "blog-title">
+                            <h3 class = "title">From our blog</h3>
+                        </div>
+                   </div>
+               </div>
+            </div>
+                <div class = "blog-bottom">
+                    <div class = "owl-carousel owl-theme post-info">
+                        <div class = "item">
+                            <div class = "post-item">
+                                <img src = "img/post-1.jpg" class = "img-fluid" alt="newspaper">
+                            </div>
+                            <div class = "post-content">
+                                <p class = "text">Our Jouney from Sheep to Shop</p>
+                                <div class = "line"></div>
+                                <p class = "content">Cliquam erat volutpat. Praesent ut ligula non mi varius sagittis. Curabitur blandit mollis lacus. Praesent metus tellus...</p>
+                                <a class = "post-link" href="#">Continue reading<i class="fa fa-angle-right icon" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class = "item">
+                            <div class = "post-item">
+                                <img src = "img/post.png" class = "img-fluid" alt="newspaper">
+                            </div>
+                            <div class = "post-content">
+                                <p class = "text">Our Jouney from Sheep to Shop</p>
+                                <div class = "line"></div>
+                                <p class = "content">Cliquam erat volutpat. Praesent ut ligula non mi varius sagittis. Curabitur blandit mollis lacus. Praesent metus tellus...</p>
+                                <a class = "post-link" href="#">Continue reading<i class="fa fa-angle-right icon" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class = "item">
+                            <div class = "post-item">
+                                <img src = "img/clock.jpg" class = "img-fluid" alt="newspaper">
+                            </div>
+                            <div class = "post-content">
+                                <p class = "text">Our Jouney from Sheep to Shop</p>
+                                <div class = "line"></div>
+                                <p class = "content">Cliquam erat volutpat. Praesent ut ligula non mi varius sagittis. Curabitur blandit mollis lacus. Praesent metus tellus...</p>
+                                <a class = "post-link" href="#">Continue reading<i class="fa fa-angle-right icon" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class = "item">
+                            <div class = "post-item">
+                                <img src = "img/post-1.jpg" class = "img-fluid" alt="newspaper">
+                                <div class = "post-content">
+                                    <p class = "text">Our Jouney from Sheep to Shop</p>
+                                    <div class = "line"></div>
+                                    <p class = "content">Cliquam erat volutpat. Praesent ut ligula non mi varius sagittis. Curabitur blandit mollis lacus. Praesent metus tellus...</p>
+                                    <a class = "post-link" href="#">Continue reading<i class="fa fa-angle-right icon" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "item">
+                            <div class = "post-item">
+                                <img src = "img/post-1.jpg" class = "img-fluid" alt="newspaper">
+                                <div class = "post-content">
+                                    <p class = "text">Our Jouney from Sheep to Shop</p>
+                                    <div class = "line"></div>
+                                    <p class = "content">Cliquam erat volutpat. Praesent ut ligula non mi varius sagittis. Curabitur blandit mollis lacus. Praesent metus tellus...</p>
+                                    <a class = "post-link" href="#">Continue reading<i class="fa fa-angle-right icon" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+       <section class = "support">
+           <div class = "container">
+                <div class = "support-content">
+                    <div class = "row">
+                        <div class = "col-lg-7 col-12">
+                                <div class = "content-support">
+                                    <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
+                                    <h3 class = "content">Sign up to enjoy free U.S. shipping and returns on the first order</h3>
+                                </div>
+                        </div>
+                        <div class = "col-lg-5 col-12">
+                            <div class = "infomation">
+                                <form method="GET" action="">
+                                    <div class = "seen-support">
+                                    <input class = "email" type = "email" placeholder="Email Address">
+                                    <i class="fa fa-arrow-right icon" aria-hidden="true"></i>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </section>
+       <section class = "new">
+           <div class = "container-fluid">
+               <div class = "row">
+                    <div class = "col-12">
+                        <div class = "new-title">
+                            <button class = "button" type = "button">instargram shop
+                                <span class = "line"></span>
+                                <span class = "line-border"></span>
+                            </button>
+                            <img src="img/instagram.png" alt = "instargram" class = "image">
+                        </div>
+                    </div>
+               </div>
+               <div class = "row">
+                   <div class = "new-content">
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/sea.jpg" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/man.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/shoes2.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/shoes.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/pen.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                   </div>
+               </div>
+               <div class = "row">
+                    <div class = "new-content">
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/shirt.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/women.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/perfect.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/coat.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                        <div class = "intro">
+                            <img class = "img-fluid image" src = "img/scenery.png" alt = "ảnh hot">
+                            <div class = "coating"></div>
+                            <i class="fa fa-instagram icon" aria-hidden="true"><span class = "text">shop it</span></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class = "footer">
+            <div class = "footer-top">
+                <div class = "container">
+                    <div class = "row">
+                        <div class = "col-md-2 col-12 order">
+                            <div class = "intro-footer ">
+                                <h3 class = "title">company</h3>
+                                <ul class="nav flex-column justify-content-start">
+                                    <li class="nav-item">
+                                      <a class="nav-link text" href="#">our story</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link text" href="#">eureka</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link text" href="#">project</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link text" href="#">thinkers</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class = "col-md-2 col-12 order">
+                            <div class = "intro-footer">
+                                <p class = "title">infomation</p>
+                                <div class = "line"></div>
+                                <ul class="nav flex-column justify-content-start">
+                                    <li class="nav-item">
+                                      <a class="nav-link text" href="#">help</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link text" href="#">feedback</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link text" href="#">returns</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link text" href="#">press</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class = "col-lg-4 col-md-12 col-12 order">
+                            <div class = "advertisement">
+                                <img src = "img/logoa.jpg" alt = "">
+                                <p class = "text">hebe</p>
+                                <p class = "shop-name">minimal shop</p>
+                            </div>
+                        </div>
+                        <div class = "col-lg-4 col-md-8 col-12 order">
+                            <div class = "info-footer">
+                                <p class = "text">Don't miss our on the latest.</p>
+                                <p class = "content">Get notified of the new product, limited releases,and more.</p>
+                                <form method="POST" action="">
+                                    <div class = "infomation">
+                                        <input class = "info-email" type = "email" placeholder="Email Address">
+                                        <input class = "button" type = "submit" value="SUBMIT">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class = "footer-bottom">
+                <div class = "container">
+                    <div class = "row">
+                        <div class = "col-12 col-lg-4">
+                            <ul class="nav list-icon">
+                                <li class="nav-item">
+                                  <a class="nav-link icon" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link icon" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link icon" href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link icon" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class = "col-12 col-lg-4">
+                        <p class = "info">© 2018 Famithemes. All rights reserved</p>
+                    </div>
+                    <div class = "col-12 col-lg-4">
+                        <ul class="nav list justify-content-end">
+                            <li class="nav-item">
+                              <a class="nav-link image" href="#"><img src="img/paypal.png" alt = "thẻ paypal"></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link image" href="#"><img src="img/visa.png" alt = " thẻ visa"></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link image" href="#"><img src="img/jcb.png" alt = "Ngân hàng JCB"></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link image" href="#"><img src="img/maestro.png" alt = "Thẻ thanh toán"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src ="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+        <script src="https://use.fontawesome.com/a8a19525f4.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+        <script>
+        </script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:30,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3,
+                    }
+                }
+            })
+        </script>
+        <script>
+            let screen = document.getElementById('screen');
+            let infoAccount = document.getElementById('form-account');
+            let find = document.getElementById('find');
+            let overlay =document.getElementById('overlay');
+            $(document).ready(function(){
+                $('.sidebarBtn').click(function(){
+                    $('.sidebar').toggleClass('active');
+                    overlay.style.visibility ='visible';
+                })
+            })
+            $(document).ready(function(){
+                $('#close').click(function(){
+                    $('.sidebar').toggleClass('active');
+                    overlay.style.visibility ='hidden';
+                })
+            })
+            $(document).ready(function(){
+                $('#overlay').click(function(){
+                    $('.sidebar').toggleClass('active');
+                    overlay.style.visibility ='hidden';
+                })
+            })
+            $(document).ready(function(){
+                $('.search-bar').click(function(){
+                    $('#search').toggleClass('activiti');
+                //   find.style.visibility='visible';
+                })
+            })
+            $(document).ready(function(){
+                $('#list-product').click(function(){
+                    $('#menu-product').toggleClass('active-menu');
+                    screen.style.visibility ='visible';
+                })
+            })
+            $(document).ready(function(){
+                $('#close-menu').click(function(){
+                    $('#menu-product').toggleClass('active-menu');
+                    screen.style.visibility ='hidden';
+                })
+            })
+            $(document).ready(function(){
+                $('#screen').click(function(){
+                    $('#menu-product').toggleClass('active-menu');
+                    screen.style.visibility ='hidden';
+                })
+            })
+        </script>
+    </body>
+</html>

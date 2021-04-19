@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+            <div class = "product" style="width:500px">
+                <img src = "img/clock.jpg">
+                <img src="img/coat.png" style="display: none;" >
+            </div>
+            <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            $(".product").hover(function() {
+                $(this).find("img:last").fadeToggle();
+            });
+            $(".product").hover(function() {
+                $(this).find("img:first").fadeToggle();
+            });
+        </script>
+    </body>
+</html>
